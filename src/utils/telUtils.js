@@ -207,3 +207,7 @@ const tels = [
     'El trabajo es una participación en la actividad de Dios creadora y comunicadora de sí mismo',
     'Todo lo grande crece y madura silenciosamente'
 ]
+
+export const telRandom = () =>{
+    return(tels[Math.floor(Math.random() * tels.length)])
+}
