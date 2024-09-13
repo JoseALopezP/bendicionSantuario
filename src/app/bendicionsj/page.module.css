@@ -1,0 +1,42 @@
+.background{
+    height: 100vh; /* Full viewport height */
+    width: auto; /* Width adjusts proportionally */
+    object-fit: cover; /* Cover the container (viewport) */
+    object-position: center; /* Center the image horizontally */
+    display: block; /* Block to remove inline gaps */
+    margin: 0 auto; /* Center the image block */
+    z-index: -10;
+}
+.linkButtonBlock{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.linkButton{
+    background-color: #846046;
+    color: #fff;
+    font-family: lato;
+    font-weight: 700;
+    font-size: 20px;
+    width: calc(100vw - 40px);
+    height: 64px;
+    border-radius: 34px;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+.bendicionTitle{
+    color: #CBCBD4;
+    margin: 40px 0;
+    font-size: 32px;
+    text-align: center;
+    font-style: italic;
+}

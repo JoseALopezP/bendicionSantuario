@@ -1,0 +1,65 @@
+.backButton{
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 32px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 120;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #846046;
+    font-weight: 700;
+}
+.textBlock{
+    position: relative;
+    top: -32px;
+    z-index: 150;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 32px;
+    color: #000;
+    padding: 20px;
+    font-family: lato;
+}
+.titleHito{
+    width: 100%;
+    text-align: center;
+    background-color: #846046;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.bodyHito{
+    font-size: 20px;
+    text-align: justify;
+}
+.subtitleHito{
+    margin: 20px 0 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.questionsHito{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.buttonHito{
+    background-color: #FE8668;
+    color: #fff;
+    font-family: lato;
+    font-weight: 700;
+    font-size: 20px;
+    width: calc(100% - 40px);
+    height: 64px;
+    border-radius: 34px;
+    position: absolute;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+}
