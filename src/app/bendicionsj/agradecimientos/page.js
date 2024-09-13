@@ -1,11 +1,11 @@
 'use client'
-import HitoComponent from "@/app/components/HitoComponent";
+import Link from "next/link";
 import styles from "./page.module.css";
 import { DataContext } from "@/context/DataContext";
 import { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export default function hito1() {
+export default function Agradecimientos() {
   const router = useRouter()
   const {
     updateEstado,
@@ -47,6 +47,13 @@ export default function hito1() {
     };
   }, []);
   return (
-    <HitoComponent hito={'1'}/>
+    <>
+    <img src="/fondo.png" className={styles.background}/>
+    <div className={styles.linkButtonBlock}>
+      <form onSubmit={() => ()}>
+        <textarea/>
+      </form>
+    </div>
+    </>
   );
 }

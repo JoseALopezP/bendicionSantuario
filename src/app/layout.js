@@ -1,3 +1,4 @@
+import { DataContextProvider } from "@/context/DataContext";
 import "./globals.css";
 import { lora } from "./ui/fonts";
 
@@ -13,8 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={lora.className}>
+        <DataContextProvider>
         {children}
-        
+        </DataContextProvider>
       </body>
     </html>
   );

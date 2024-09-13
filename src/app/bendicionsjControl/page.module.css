@@ -1,0 +1,9 @@
+.buttonsBlock{
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+.buttonsBlock button{
+    margin: 10px 0;
+    height: 40px;
+}

@@ -1,7 +1,43 @@
+'use client'
 import Link from "next/link";
 import styles from "./page.module.css";
+import { DataContext } from "@/context/DataContext";
+import { useContext, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function BendicionSJ() {
+  const router = useRouter()
+  const {
+    updateEstado,
+    estado
+  } = useContext(DataContext);
+
+  useEffect(() =>{
+    console.log(estado)
+    if(estado === '1'){
+      router.push("/bendicionsj/hito1")
+    }else{
+      if(estado === '2'){
+        router.push("/bendicionsj/hito2")
+      }else{
+        if(estado === '3'){
+          router.push("/bendicionsj/hito3")
+        }else{
+          if(estado === '4'){
+            router.push("/bendicionsj/hito4")
+          }
+        }
+      }
+    }
+  }, [estado])
+  
+  useEffect(() => {
+    updateEstado()
+    const timerID = setInterval(() => updateEstado(), 10000);
+    return () => {
+        clearInterval(timerID);
+    };
+  }, []);
   return (
     <>
     <img src="/fondo.png" className={styles.background}/>
