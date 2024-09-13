@@ -1,6 +1,7 @@
 'use client'
 import HitoComponent from "@/app/components/HitoComponent";
 import styles from "./page.module.css";
+import TelTemplate from "@/app/components/TelTemplate";
 import { DataContext } from "@/context/DataContext";
 import { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
