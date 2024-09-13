@@ -7,11 +7,18 @@ import { useRouter } from "next/navigation";
 
 export default function Agradecimientos() {
   const router = useRouter()
+  const [agrad, setAgrad] = useState('')
   const {
     updateEstado,
-    estado
+    estado,
+    addComentario,
+    updateAgradecimientos,
+    agradecimientos
   } = useContext(DataContext);
-
+  const handleSubmit = (event) =>{
+    event.preventDefault();
+    addComentario(agrad)
+  }
   useEffect(() =>{
     console.log(estado)
     if(estado === '1'){
@@ -46,13 +53,24 @@ export default function Agradecimientos() {
         clearInterval(timerID);
     };
   }, []);
+  useEffect(() => {
+    updateAgradecimientos()
+    console.log(agradecimientos)
+    const timerID = setInterval(() => updateAgradecimientos(), 10000);
+    return () => {
+        clearInterval(timerID);
+    };
+  }, []);
   return (
     <>
+    <Link className={styles.backButton} href="/bendicionsj">&nbsp;&nbsp;&lt;</Link>
     <img src="/fondo.png" className={styles.background}/>
     <div className={styles.linkButtonBlock}>
-      <form onSubmit={() => ()}>
-        <textarea/>
+      <form onSubmit={(event) => handleSubmit(event)} >
+        <input type="text" className={styles.inputSend} placeholder="Te agradezco por..." onChange={e => setAgrad(e.target.value)}/>
+        <button type="submit" className={styles.buttonSend}>Enviar</button>
       </form>
+      <p className={styles.agradecimientos}>{agradecimientos}</p>
     </div>
     </>
   );

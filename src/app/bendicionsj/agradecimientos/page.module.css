@@ -17,6 +17,7 @@
     display: inline-flex;
     flex-direction: column;
     padding: 20px;
+    background-color: #ffffff00;
 }
 .linkButton{
     background-color: #846046;
@@ -39,4 +40,42 @@
     font-size: 32px;
     text-align: center;
     font-style: italic;
+}
+.buttonSend{
+    background-color: #846046;
+    outline: none;
+    border: none;
+    height: 38px;
+    width: 20%;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #CBCBD4;
+}
+.inputSend{
+    height: 40px;
+    width: 75%;
+    padding: 0;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 60px;
+}
+.agradecimientos{
+    padding: 5px;
+    font: lato;
+}
+.backButton{
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 32px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 120;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #846046;
+    font-weight: 700;
 }

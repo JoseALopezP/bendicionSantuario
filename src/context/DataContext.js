@@ -20,8 +20,8 @@ export const DataContextProvider = ({ defaultValue = [], children }) => {
 
     // Fetch "agradecimientos" document
     const updateAgradecimientos = async () => {
-        const agradecimientosData = await getDocument('agradecimientos', 'agradecimientos');
-        setAgradecimientos(agradecimientosData);
+        const agradecimientosData = await getDocument('comentarios', 'comentarios');
+        setAgradecimientos(agradecimientosData.comentarios);
     };
 
     // Add a comment to the "comentarios" array inside "comentarios" document
